@@ -1,0 +1,46 @@
+{
+  "name": "css-size",
+  "version": "5.0.7",
+  "description": "Compare the compressed and uncompressed sizes of a CSS file before and after processing.",
+  "main": "src/index.js",
+  "types": "css-size.d.ts",
+  "bin": {
+    "css-size": "src/cli.js"
+  },
+  "files": [
+    "LICENSE-MIT",
+    "css-size.d.ts",
+    "src",
+    "usage.txt"
+  ],
+  "keywords": [
+    "bytes",
+    "css",
+    "gzip",
+    "size"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cssnano/cssnano",
+  "author": {
+    "name": "Ben Briggs",
+    "email": "beneb.info@gmail.com",
+    "url": "http://beneb.info"
+  },
+  "repository": "cssnano/cssnano",
+  "dependencies": {
+    "cssnano": "^5.0.17",
+    "minimist": "^1.2.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.2.15"
+  },
+  "devDependencies": {
+    "postcss": "^8.2.15"
+  },
+  "bugs": {
+    "url": "https://github.com/cssnano/cssnano/issues"
+  },
+  "engines": {
+    "node": "^10 || ^12 || >=14.0"
+  }
+}

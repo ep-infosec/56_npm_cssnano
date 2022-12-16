@@ -1,0 +1,81 @@
+{
+  "name": "cssnano-core",
+  "private": true,
+  "scripts": {
+    "lint": "pnpm types && eslint . --cache --ignore-path .gitignore --ext .js,.mjs",
+    "fixlint": "prettier --write . && pnpm lint -- --fix",
+    "build:integration": "node ./util/buildFrameworks.mjs",
+    "pretest": "pnpm lint",
+    "test:only": "uvu packages \"test.*\\.js$\"",
+    "test:coverage": "c8 pnpm test:only",
+    "test": "pnpm test:coverage",
+    "test:helpers": "uvu packages \"test.*\\.mjs$\"",
+    "types": "tsc -b",
+    "all-publish": "pnpm changeset publish"
+  },
+  "workspaces": [
+    "./packages/*"
+  ],
+  "engines": {
+    "node": "^10 || ^12 || >=14"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.25.2",
+    "@types/node": "^18.11.9",
+    "c8": "^7.12.0",
+    "diff": "^5.1.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "nanospy": "^0.5.0",
+    "picocolors": "^1.0.0",
+    "pleeease-filters": "^4.0.0",
+    "postcss": "^8.4.18",
+    "postcss-font-magician": "^3.0.0",
+    "postcss-scss": "^3.0.4",
+    "postcss-simple-vars": "^6.0.1",
+    "postcss-value-parser": "^4.2.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "uvu": "0.5.5"
+  },
+  "browserslist": {
+    "production": ["IE 11 and last 2 versions"],
+    "chrome58": [
+      "Chrome 58"
+    ],
+    "chrome62": [
+      "Chrome 62"
+    ],
+    "edge15": [
+      "Edge 15"
+    ],
+    "ie6": [
+      "IE 6"
+    ],
+    "ie7": [
+      "IE 7"
+    ],
+    "ie8": [
+      "IE 8"
+    ],
+    "ie9": [
+      "IE 9"
+    ],
+    "ie11": [
+      "IE 11"
+    ],
+    "not ie": [
+      "defaults",
+      "not ie <=11"
+    ],
+    "opera9": [
+      "Opera 9"
+    ],
+    "firefox2": [
+      "Firefox 2"
+    ],
+    "safari5": [
+      "Safari < 5"
+    ]
+  }
+}
